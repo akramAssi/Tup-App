@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:flutter/widgets.dart';
-import 'package:test_app/domain/model.dart';
+import 'package:test_app/domain/model/model.dart';
 import 'package:test_app/presentation/base/base_viewmodel.dart';
 import 'package:test_app/presentation/resources/assets_mangers.dart';
 import 'package:test_app/presentation/resources/string_manager.dart';
