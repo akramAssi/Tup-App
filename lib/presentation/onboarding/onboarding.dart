@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:test_app/domain/model/model.dart';
-import 'package:test_app/presentation/resources/assets_mangers.dart';
 import 'package:test_app/presentation/resources/color_manager.dart';
 import 'package:test_app/presentation/resources/routes_manager.dart';
 import 'package:test_app/presentation/resources/string_manager.dart';

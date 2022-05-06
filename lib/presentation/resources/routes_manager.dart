@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/app/di.dart';
 import 'package:test_app/presentation/login/login.dart';
 import 'package:test_app/presentation/main/main_view.dart';
 import 'package:test_app/presentation/onboarding/onboarding.dart';
@@ -31,6 +32,7 @@ class RouteGenerator {
       case Routes.storeDetailsRoute:
         return MaterialPageRoute(builder: (_) => const StoreDetailsView());
       case Routes.loginRoute:
+        initLoginModule();
         return MaterialPageRoute(builder: (_) => const LoginView());
       default:
         return unDefineRoute();
@@ -38,9 +40,10 @@ class RouteGenerator {
   }
 
   static Route unDefineRoute() {
-    return MaterialPageRoute(builder: (_) => Scaffold(
-      appBar: AppBar(),
-      body: const Center(child:Text(AppStrings.pageNotFound)),
-    ));
+    return MaterialPageRoute(
+        builder: (_) => Scaffold(
+              appBar: AppBar(),
+              body: const Center(child: Text(AppStrings.pageNotFound)),
+            ));
   }
 }

@@ -24,8 +24,12 @@ class RepositoryImpl extends Repository {
         if (response.status == ApiInternalStatus.success) {
           return Right(response.toDomain());
         } else {
-          return Left(Faliure(ApiInternalStatus.faliuer,
-              response.message ?? ResponsesMessage.defaultErorr));
+          return Left(
+            Faliure(
+              ApiInternalStatus.faliuer,
+              response.message ?? ResponsesMessage.defaultErorr,
+            ),
+          );
         }
       } catch (error) {
         return Left(ErrorHandler.handel(error).faliure);

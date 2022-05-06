@@ -3,7 +3,7 @@ import 'package:retrofit/http.dart';
 import 'package:test_app/app/constants.dart';
 import 'package:test_app/data/responses/responses.dart';
 
-part 'generated/app_api.g.dart';
+part 'app_api.g.dart';
 
 @RestApi(baseUrl: Constants.baseUrl)
 abstract class AppServicesClient {

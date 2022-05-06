@@ -15,7 +15,7 @@ class LoginUseCase implements BaseUseCase<LoginUseCaseInput, Authentication> {
   Future<Either<Faliure, Authentication>> execute(
       LoginUseCaseInput input) async {
     DeviceInfo _deviceInfo = await getDeviceDetails();
-    await _repository.login(LoginRequest(
+    return await _repository.login(LoginRequest(
         input.email, input.password, _deviceInfo.identifire, _deviceInfo.name));
   }
 }
